@@ -8,16 +8,39 @@
 # testing
 /coverage
 
+# next.js
+/.next
+/out
+
+# next-sitemap
+public/robots.txt
+public/sitemap.xml
+public/sitemap-*.xml
+
+# cache
+.swc/
+tsconfig.tsbuildinfo
+
 # production
 /build
 
 # misc
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+*.pem
+Thumbs.db
 
+# debug
 npm-debug.log*
+pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# dotenv local files
+.env
+.env*.local
+
+# local folder
+local
+
+# vercel
+.vercel
