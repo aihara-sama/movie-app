@@ -44,10 +44,6 @@
       "rules": {
         "@next/next/no-img-element": "off", // Allow use of <img /> element
         "prefer-spread": "warn", // Prefer spread over Function.apply()
-        "react/destructuring-assignment": "warn", // Prefer { val } = props instead of props.val
-        "react/no-unknown-property": "warn", // No invalid prop passing, for ex, class instead of className
-        "react/jsx-curly-brace-presence": "warn", // Do foo="bar" instead of foo={"bar"}
-        "react/jsx-key": "warn", // Always provide a key while using .map() on jsx elements
         "no-plusplus": "off", // Use of unary ++ operator
         "no-param-reassign": "off", // Assignment to property of function parameters
         "react/require-default-props": "off", // Allow non-defined react props as undefined
