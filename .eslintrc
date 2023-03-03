@@ -30,7 +30,11 @@
     // Configuration for TypeScript files
     {
       "files": ["**/*.ts", "**/*.tsx"],
-      "plugins": ["@typescript-eslint", "unused-imports"],
+      "plugins": [
+        "@typescript-eslint",
+        "unused-imports",
+        "eslint-plugin-react"
+      ],
       "extends": ["airbnb-typescript", "plugin:prettier/recommended"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
@@ -55,6 +59,7 @@
         "unused-imports/no-unused-imports": "error", // No import should remain unused
         "@typescript-eslint/no-unused-vars": "off", // Disable this so that the rule below can work
         "import/no-extraneous-dependencies": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
         "unused-imports/no-unused-vars": [
           "error",
           { "argsIgnorePattern": "^_" }

@@ -13,7 +13,6 @@ import createEmotionCache from "utils/createEmotionCache";
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 function App() {
-  const b = 2;
   return (
     <CacheProvider value={clientSideEmotionCache}>
       <head>
