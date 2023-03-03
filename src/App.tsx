@@ -1,20 +1,8 @@
-import { CacheProvider } from "@emotion/react";
 import { Typography } from "@mui/material";
-import CssBaseline from "@mui/material/CssBaseline";
-import { LocalizationProvider } from "@mui/x-date-pickers";
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
-import { Toaster } from "components/common/Toaster";
-import { ThemeProvider } from "contexts/theme";
-import { Provider } from "react-redux";
-import { PersistGate } from "redux-persist/integration/react";
-import { persistor, store } from "store";
-import createEmotionCache from "utils/createEmotionCache";
 
-// Client-side cache, shared for the whole session of the user in the browser.
-const clientSideEmotionCache = createEmotionCache();
 function App() {
   return (
-    <CacheProvider value={clientSideEmotionCache}>
+    <>
       <head>
         <title>Home</title>
         <link rel="shortcut icon" href="/favicon.ico" />
@@ -31,20 +19,10 @@ function App() {
         <meta name="emotion-insertion-point" content="" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </head>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          {() => (
-            <ThemeProvider>
-              <LocalizationProvider dateAdapter={AdapterDateFns}>
-                <CssBaseline />
-                <Toaster />
-                <Typography>Home</Typography>
-              </LocalizationProvider>
-            </ThemeProvider>
-          )}
-        </PersistGate>
-      </Provider>
-    </CacheProvider>
+      <body>
+        <Typography>Home</Typography>
+      </body>
+    </>
   );
 }
 
