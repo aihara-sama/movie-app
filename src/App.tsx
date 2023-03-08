@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import Game from "components/Game";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </head>
       <body>
-        <Typography>Home</Typography>
+        <Game />
       </body>
     </>
   );

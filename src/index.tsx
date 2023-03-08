@@ -4,7 +4,6 @@ import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import App from "App";
 import { Toaster } from "components/common/Toaster";
 import { ThemeProvider } from "contexts/theme";
-import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
@@ -14,9 +13,9 @@ const rootElement = document.getElementById("root");
 const root = ReactDOM.createRoot(rootElement);
 
 root.render(
-  <ThemeProvider>
-    <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <Provider store={store}>
+  <Provider store={store}>
+    <ThemeProvider>
+      <LocalizationProvider dateAdapter={AdapterDateFns}>
         <PersistGate loading={null} persistor={persistor}>
           {() => (
             <>
@@ -26,7 +25,7 @@ root.render(
             </>
           )}
         </PersistGate>
-      </Provider>
-    </LocalizationProvider>
-  </ThemeProvider>
+      </LocalizationProvider>
+    </ThemeProvider>
+  </Provider>
 );
