@@ -1,4 +1,4 @@
-import Game from "components/Game";
+import { Tyopgraphy } from "@mui/material";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </head>
       <body>
-        <Game />
+        <Tyopgraphy>Home</Tyopgraphy>
       </body>
     </>
   );
