@@ -1,4 +1,4 @@
-import { Tyopgraphy } from "@mui/material";
+import { Typography } from "@mui/material";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </head>
       <body>
-        <Tyopgraphy>Home</Tyopgraphy>
+        <Typography>Movie App</Typography>
       </body>
     </>
   );
