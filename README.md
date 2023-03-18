@@ -1,4 +1,4 @@
-# Movie app
+# Browse popular movies!
 
 ### `yarn start`
 
